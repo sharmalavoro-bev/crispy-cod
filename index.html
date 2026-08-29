@@ -602,8 +602,14 @@ button{font-family:inherit;cursor:pointer;}
    RESPONSIVE
    ========================================================================== */
 @media(max-width:1080px){
-  .hero-inner{grid-template-columns:1fr; gap:70px;}
-  .hero-visual{height:380px; max-width:480px; margin:0 auto;}
+  .hero-inner{grid-template-columns:1fr; gap:56px;}
+  .hero-visual{
+    height:auto; max-width:380px; margin:0 auto;
+    display:flex; flex-direction:column; align-items:center; gap:34px;
+  }
+  .hero-plate{position:static; width:min(260px,72%); margin:0 auto;}
+  .hero-ticket{position:static; width:100%; max-width:320px; margin:0 auto; transform:rotate(-2deg);}
+  .ht-punch{display:none;}
   .about-inner{grid-template-columns:1fr; gap:44px;}
   .about-cards{grid-template-columns:1fr 1fr;}
   .build-inner{grid-template-columns:1fr; gap:44px;}
@@ -631,8 +637,9 @@ button{font-family:inherit;cursor:pointer;}
   .about-cards{grid-template-columns:1fr;}
   .footer-top{grid-template-columns:1fr;}
   .hero{padding-top:130px;}
-  .hero-plate{width:220px; top:0;}
-  .hero-ticket{width:100%; transform:rotate(-2deg);}
+  .hero-visual{max-width:280px; gap:26px;}
+  .hero-plate{width:100%;}
+  .hero-ticket{max-width:100%;}
   .deal-grid{grid-template-columns:1fr 1fr;}
 }
 @media(max-width:460px){
@@ -762,10 +769,20 @@ button{font-family:inherit;cursor:pointer;}
         <div class="ht-punch"></div>
       </div>
       <div class="hero-plate">
-        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="100" cy="120" rx="90" ry="14" fill="rgba(0,0,0,.18)"/>
-          <path d="M20 70c22-46 76-62 118-42 12 6 20 16 20 28 0 26-38 46-84 46S16 92 20 70z" fill="#f6c418"/>
-          <path d="M20 70c8-18 26-32 48-38-4 10-2 22 6 30-16 12-38 16-54 8z" fill="#dda60a"/>
+        <svg viewBox="0 0 200 170" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="100" cy="140" rx="92" ry="15" fill="rgba(0,0,0,.2)"/>
+          <circle cx="100" cy="82" r="80" fill="#fbf3e2"/>
+          <circle cx="100" cy="82" r="80" fill="none" stroke="#e3d2ab" stroke-width="2"/>
+          <circle cx="100" cy="82" r="66" fill="#e8b923"/>
+          <circle cx="100" cy="82" r="58" fill="#f6c418"/>
+          <circle cx="72" cy="60" r="8" fill="#9c222e"/>
+          <circle cx="128" cy="66" r="8" fill="#9c222e"/>
+          <circle cx="100" cy="98" r="8" fill="#9c222e"/>
+          <circle cx="74" cy="102" r="7" fill="#9c222e"/>
+          <circle cx="126" cy="102" r="7" fill="#9c222e"/>
+          <circle cx="100" cy="60" r="6" fill="#3a7d1f"/>
+          <circle cx="60" cy="82" r="6" fill="#3a7d1f"/>
+          <circle cx="140" cy="86" r="6" fill="#3a7d1f"/>
         </svg>
       </div>
     </div>
@@ -1003,10 +1020,10 @@ button{font-family:inherit;cursor:pointer;}
       <div class="menu-sub">
         <h3>Sausages</h3>
         <div class="dish-row reveal"><div class="dish-info"><h4>Jumbo Sausage</h4></div><span class="ticket ticket-wide">£1.50</span></div>
-          <div class="dish-row reveal"><div class="dish-info"><h4>Small Sausage</h4></div><span class="ticket ticket-wide">£1.30</span></div>
-          <div class="dish-row reveal"><div class="dish-info"><h4>Battered Jumbo Sausage</h4></div><span class="ticket ticket-wide">£1.90</span></div>
-          <div class="dish-row reveal"><div class="dish-info"><h4>Battered Burger</h4></div><span class="ticket ticket-wide">£2.00</span></div>
-          <div class="dish-row reveal"><div class="dish-info"><h4>Saveloy</h4></div><span class="ticket ticket-wide">£2.00</span></div>
+        <div class="dish-row reveal"><div class="dish-info"><h4>Small Sausage</h4></div><span class="ticket ticket-wide">£1.30</span></div>
+        <div class="dish-row reveal"><div class="dish-info"><h4>Battered Jumbo Sausage</h4></div><span class="ticket ticket-wide">£1.90</span></div>
+        <div class="dish-row reveal"><div class="dish-info"><h4>Battered Burger</h4></div><span class="ticket ticket-wide">£2.00</span></div>
+        <div class="dish-row reveal"><div class="dish-info"><h4>Saveloy</h4></div><span class="ticket ticket-wide">£2.00</span></div>
       </div>
     </div>
 
@@ -1258,13 +1275,12 @@ button{font-family:inherit;cursor:pointer;}
           <h4>Special Family</h4>
           <p>2 large fish, 2 large sausage, 2 fish cakes, 2 small chips &amp; a 1.25Ltr drink.</p>
         </article>
-          <article class="deal-card deal-card-feature">
-            <span class="deal-tag">2 kebabs in naan</span>
-            <span class="deal-price">£18.99</span>
-            <h4>Super Special Family Meal</h4>
-            <p>Any 2 kebabs in naan with sauce, salad, large chips &amp; a 1.25Ltr bottle.</p>
-          </article>
-
+        <article class="deal-card deal-card-feature">
+          <span class="deal-tag">2 kebabs in naan</span>
+          <span class="deal-price">£18.99</span>
+          <h4>Super Special Family Meal</h4>
+          <p>Any 2 kebabs in naan with sauce, salad, large chips &amp; a 1.25Ltr bottle.</p>
+        </article>
         <article class="deal-card deal-card-feature">
           <span class="deal-tag">for the kids</span>
           <span class="deal-price">£4.00</span>
